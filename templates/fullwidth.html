@@ -1,0 +1,116 @@
+
+{% extends "index1.html" %}
+{% load cms_tags %}
+{% load static %}
+<!DOCTYPE html>
+<head>
+
+        <title>{% block title %}{% page_attribute "page_title" %}{% endblock title %}</title>
+</head>
+ <body>
+{% block content %}
+
+<!--
+   <div class="container">
+
+
+    <div class="row align-items-center my-5">
+      <div class="col-lg-7">
+        <img class="img-fluid rounded mb-4 mb-lg-0" style="width:800px;height:500px;" src="{% static 'images/rose1.jpg' %}" alt="Will be load soon ...">
+      </div>
+      <!-- /.col-lg-8
+
+      <div class="col-lg-5">
+        <h1 class="font-weight-light">Ekvira Photo Studio</h1>
+        <p>We are ready to capture your great moments !
+        We are ready to capture your great moments !
+        We are ready to capture your great moments !
+        We are ready to capture your great moments !
+        We are ready to capture your great moments !</p>
+        <a class="btn btn-primary" href="#foot">Call to Action!</a>
+      </div>
+    </div>
+
+
+
+    <!--cls-->
+  </div>
+{% placeholder content or %}
+
+
+  <div class="container">
+
+
+
+
+  </div>
+<!--<div align="center">
+   <h2 class="card-title">Our Latest creations .... </h2>
+</div>
+-->
+<hr/>
+<br>
+
+{% endplaceholder %}
+	{% placeholder "content" %}
+
+
+
+
+<footer id="foot">
+  {% static_placeholder 'Footer' %}
+
+<style>
+    #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+    </style>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><b><strong>^</strong></b></button>
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+</footer>
+{% endblock content %}
+
+
+
+
+
+</body>
+</html>
